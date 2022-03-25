@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+    <title>After Round One</title>
+    <script src="https://kit.fontawesome.com/2c851c69c6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="game-div">
+      <div id="page-one" class="flexy" style="text-align: center;">
+        
+        <!-- <h1>Welcome!!!</h1> -->
+        <p style="text-align: center;">Choose your goal which is a number between 1 to 10 other than the number chosen by me</p>
+        <p> I am choosing <span style="color: #000; font-size: 20px;" id="mygoal"></span></p>
+        <div id="test"> </div>
+        <div id="goaloptions"> 
+          <span class="goalchoice"><button class="goalchoic" value="10" onclick="goalten()">10</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="1" onclick="goalone()">1</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="2" onclick="goaltwo()">2</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="3" onclick="goalthree()">3</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="4" onclick="goalfour()">4</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="5" onclick="goalfive()">5</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="6" onclick="goalsix()">6</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="7" onclick="goalseven()">7</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="8" onclick="goaleight()">8</button></span>
+          <span class="goalchoice"><button class="goalchoic" value="9" onclick="goalnine()">9</button></span>
+        </div>
+
+      </div>
+      <div id="page-two" style="display:none" >
+        <div id="typing">
+          After Round One! <br>Original Panadol Extra<br> Otugbede <br>Babagida yaso!<br>
+          <button type="button" class="btn btn-primary" onclick="pagethree()">Play!</button>
+        </div>
+
+       </div>
+      <div id="page-three" style="display:none; width: 80%; text-align: center;">
+        <div class="row justify-content-between">
+          <span class="goal-box col-5">
+            <span class="col-9">My Goal</span>
+            <span class="col-3" style="color: #000;" id="my-goal">nil</span>
+          </span>
+          <span class="goal-box col-5">
+            <span class="col-9">Your Goal</span>
+            <span class="col-3" style="color: #000;" id="your-goal"></span>
+          </span>
+        </div>
+       
+        <div class="modal-body" id="first">         
+          <span class="goalchoice"><button onclick="scorezero()" data-toggle="modal" data-target="#exampleModalCenter">0</button></span>
+          <span class="goalchoice"><button onclick="scoreone()" data-toggle="modal" data-target="#exampleModalCenter">1</button></span>
+          <span class="goalchoice"><button onclick="scoretwo()" data-toggle="modal" data-target="#exampleModalCenter">2</button></span>
+          <span class="goalchoice"><button onclick="scorethree()" data-toggle="modal" data-target="#exampleModalCenter">3</button></span>
+          <span class="goalchoice"><button onclick="scorefour()" data-toggle="modal" data-target="#exampleModalCenter">4</button></span>
+          <span class="goalchoice"><button onclick="scorefive()" data-toggle="modal" data-target="#exampleModalCenter">5</button></span>
+        </div>
+        
+        <div class="container total" style="width: 40%; align-items: center !important;">
+          <div class="row">
+            <div class="col-8" >Total</div>
+            <div class="col-4 right" id="total"></div>
+        </div></div>
+
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body" id="output">
+                You win
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Yaso</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='game.html'" id="again">Again?</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='index.html'" id="home">HOME</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="second" style="display: none;">
+          <p>Your Choice: <span id="yourchoice"></span></p>
+          <p>My Choice: <span id="mychoice"></span></p>
+  
+        </div>
+      </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    </script>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+*,html,body{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background-color: rgb(17, 17, 71) !important;
+    width: 100%;
+    height: 100%;
+}
+div#title{
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size:40px;
+    font-weight:900;
+    background: linear-gradient(90deg, #000, #f53844, #000);
+    letter-spacing: 5px;
+    /* background-repeat: no-repeat; */
+    background-size: 70%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s ease-in-out alternate-reverse infinite;
+    position: relative;
+}
+@keyframes shine {
+    0% {
+      background-position-x: -100%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+button.btn-primary{
+    text-align: right;
+}
+h5.modal-title{
+    width: 80vh;
+    text-align: center;
+    font-size: 40px !important;
+}
+.modal-body{
+    margin: 20px;
+    text-align: justify;
+}
+.main{
+    width: 100%;
+    text-align: center;
+}
+.main p{
+    color: white;
+    width: 80px;
+    height: 8;
+}
+button#play{
+    border-radius: 50% 50%;
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+    color: white;
+    height: 150px;
+    width: 150px;
+    margin: 30vh auto auto;
+    position: relative;
+    border-style: hidden;
+}
+button#play:hover{
+    border-style: dashed;
+}
+#play span{
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    font-size: 25px;
+    font-weight: 800;
+}
+#play a{
+    text-decoration: none !important;
+    color: white;
+}
+
+
+@media screen and (max-width:1000px){
+    div#title{
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+    h5.modal-title{
+        width: 50vh;
+        font-size: 30px !important;
+    }
+    button#play{
+        height: 130px;
+        width: 130px;
+        margin-top: 30vh;
+    }
+    #play span{
+        top: 48px;
+        left: 30px;
+        font-size: 25px;
+    }
+    
+}
+
+@media screen and (max-width:660px){
+    div#title{
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+    h5.modal-title{
+        font-size: 25px !important;
+    }
+    .modal-body{
+        margin: 40px;
+    }
+    button#play{
+        height: 120px;
+        width: 120px;
+        margin-top: 30vh;
+    }
+    #play span{
+        top: 40px;
+        left: 30px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:450px){
+    div#title{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    h5.modal-title{
+        font-size: 20px !important;
+    }
+    button#play{
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        margin-top: 30vh;
+    }
+    #play span{
+        top: 40px;
+        left: 30px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000 !important;
+    font-family: 'Manrope', sans-serif !important;
+    color: #000;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+  }
+  
+ p{
+      letter-spacing: 1px;
+      font-weight: 700;
+  }
+  @keyframes shine {
+    0% {
+      background-position-x: -100%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+  
+.game-div{
+    height: 70vh;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4418e;
+background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
+/* border-radius: 0px 100px; */
+}
+.flexy{
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+#typing{
+  width: 24ch;
+  animation: typing 3s steps(24);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+
+.goalchoice button{
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: 900;
+  margin: 10px;
+  background-color: #0652c5;
+}
+
+.goal-box{
+  border: 1px solid #000;
+  background-color: #d4418e;
+  width: 45%;
+  text-align: left;
+  line-height: 30px;
+  font-size: 16px;
+  padding:0 !important;
+  font-weight: 900 !important;
+}
+
+.goal-box span.col-3, .total div.col-4{
+  color: #d4418e !important;
+  font-size: 18px;
+  background-color: #ffff;
+  float: right;
+}
+.total{
+  border: 1px solid #000;
+  background-color: #d4418e;
+  line-height: 30px;
+  font-size: 18px;
+  padding:0 !important;
+  font-weight: 900 !important;
+}
+.col-9, .col-8, .col-4, .col-3{
+  padding: 0 10px !important;
+}
+
+@media screen and (max-width:1000px){
+  .game-div{
+    height: 50vh;
+    width: 60vw;
+  }
+  .flexy{
+    width: 90%;
+  }
+  .goalchoice button{
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    margin: 8px;
+  }
+  .goal-box{
+    line-height: 28px;
+    font-size: 20px;
+  }
+  
+  .goal-box span.col-3, .total div.col-4{
+    font-size: 22px;
+  }
+  .total{
+    line-height: 30px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:660px){
+  .game-div{
+    height: 50vh;
+    width: 60vw;
+  }.flexy{
+    width: 90%;
+  }
+  .goalchoice button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 8px;
+  }
+  .goal-box{
+    line-height: 24px;
+    font-size: 14px;
+  }
+  
+  .goal-box span.col-3, .total div.col-4{
+    font-size: 15px;
+  }
+  .total{
+    line-height: 24px;
+    font-size: 15px;
+  }
+  .col-9, .col-8, .col-4, .col-3{
+    padding: 0 7px !important;
+  }
+}
+@media screen and (max-width:450px){
+  .game-div{
+    height: 50vh;
+    width: 80vw;
+  }.flexy{
+    width: 90%;
+  }
+  .goalchoice button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 5px;
+  }
+  .goal-box{
+    line-height: 20px;
+    font-size: 12px;
+  }
+  
+  .goal-box span.col-3, .total div.col-4{
+    font-size: 14px;
+  }
+  .total{
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .col-9, .col-8, .col-4, .col-3{
+    padding: 0 2px !important;
+  }
+}
+
+@media screen and (max-height:950px) and (orientation:landscape){
+  .game-div{
+    height: 80vh;
+  }
+  .goalchoice button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin: 8px;
+  }
+}
+@media screen and (max-height:450px) and (orientation:landscape){
+  .game-div{
+    height: 80vh;
+  }
+  .goalchoice button{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    margin: 4px;
+  }
+}
