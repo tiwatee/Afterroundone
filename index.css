@@ -81,7 +81,19 @@ button#play:hover{
     text-decoration: none !important;
     color: white;
 }
-
+.footer{
+    width: 100vw;
+    background-color: #ffff;
+    height: 30px;
+    color: #000;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    font-weight: 900;
+}
+.footer a{
+    text-decoration: none;
+}
 
 @media screen and (max-width:1000px){
     div#title{

@@ -102,7 +102,19 @@ background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
 .col-9, .col-8, .col-4, .col-3{
   padding: 0 10px !important;
 }
-
+.footer{
+  width: 100vw;
+  background-color: #ffff;
+  height: 30px;
+  color: #000;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-weight: 900;
+}
+.footer a{
+  text-decoration: none;
+}
 @media screen and (max-width:1000px){
   .game-div{
     height: 50vh;
